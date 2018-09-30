@@ -1,0 +1,24 @@
+{
+  "name": "one-drag-box",
+  "version": "3.0.1",
+  "description": "",
+  "main": "one-drag-box.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmtur/one-drag-box.git"
+  },
+  "author": "Alex <alexmartinturrillas@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmtur/one-drag-box/issues"
+  },
+  "homepage": "https://github.com/alexmtur/one-drag-box#readme",
+  "dependencies": {
+    "@alexmtur/one-class": "^3.2.6",
+    "@alexmtur/one-style": "^3.0.2",
+    "smoothscroll-polyfill": "^0.4.3"
+  }
+}

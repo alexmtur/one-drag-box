@@ -1,0 +1,58 @@
+<!-- Execute polymer serve on the file's folder and open http://localhost:8080/components/one-modal/test.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+<script type="module">
+    //import smoothscroll from 'smoothscroll-polyfill';
+    //smoothscroll.polyfill();
+    //window.__forceSmoothScrollPolyfill__ = true;
+</script>
+
+<script type="module">
+    import {OneDragBox} from "./one-drag-box.js"
+    import {OneClass, html} from "@alexmtur/one-class"
+
+    class MyTest extends OneClass {
+        static get properties() {return {
+            open1: Boolean,
+            };
+        }
+
+        constructor() {
+            super();
+        }
+
+        _render() {return html`
+            <style>
+                #list {
+                    background: #f1f1f1;
+                    border: 1px solid black;
+                }   
+            </style> 
+            <button @click=${(e)=>{this.id('dragBox').next()}}>Next</button>
+            <button @click=${(e)=>{this.id('dragBox').previous()}}>Previous</button>    
+
+            <one-drag-box style="border: 1px solid black; width: 50%;" id="dragBox">
+                <p>Some text </p>
+                <img src="https://via.placeholder.com/350x350/ff0000/00ffff">
+                <img src="https://via.placeholder.com/150x350/00ff00/ff00ff">
+                <img src="https://via.placeholder.com/350x150/0000ff/ffff00">
+            </one-drag-box>  
+            `;
+        } 
+    }
+    customElements.define('my-test', MyTest);
+</script>
+
+</head>
+<body>
+    <my-test></my-test>
+</body>
+</html>
+
+
+
+
